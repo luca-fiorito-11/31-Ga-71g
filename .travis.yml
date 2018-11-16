@@ -104,7 +104,8 @@ jobs:
       deploy:
 
         - provider: releases
-          tags: true
+          on:
+            tags: true
           api-key: $GITHUB_TOKEN
           file:
             - ${CACHEDIR}/${FILENAME}.ace 
